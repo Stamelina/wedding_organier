@@ -8,3 +8,4 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 end
+  
