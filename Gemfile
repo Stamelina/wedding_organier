@@ -21,9 +21,11 @@ group :development do
   gem 'spring',                '1.7.2'
   gem 'spring-watcher-listen', '2.0.0'
 end
-group :development, :test do
-  gem 'sqlite3'
+
+group :production do
+  gem 'pg'
 end
+
 group :test do
   gem 'rails-controller-testing', '0.1.1'
   gem 'minitest-reporters',       '1.1.9'
@@ -31,9 +33,7 @@ group :test do
   gem 'guard-minitest',           '2.4.4'
 end
 
-group :production do
- gem 'pg', '0.17.1'
-end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
