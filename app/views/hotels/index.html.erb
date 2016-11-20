@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<h1>Catalog</h1>
+
+<table class="catalog">
+
+<% @hotels.each do |hotel| %>
+  <tr>
+    <td>
+        <div class="image">
+             <%= image_tag("/assets/h1.jpg",  alt: "like", :class => 'list_image', :style => "height:200px") %>
+        </div>
+    </td>
+    <td>
+        <div class="name">
+           <p> <%= link_to hotel.name, hotel %></p>
+        </div>
+        <div class="description">
+            <p><%=h hotel.description %></p>
+        </div>
+        <div class="price">
+           <p><%= link_to hotel.price, hotel %></p>
+        </div>
+        <div class="links">
+            <% if session[:login] == 1 %>
+              <%= link_to 'Edit', edit_item_path(item) %> |
+              <%= link_to 'Destroy', hotel, :confirm => 'Are you sure?', :method => :delete %>
+            <% else %>
+             <p> <a href="http://www.hitched.ie/wedding-venues/castle-leslie-estate_22.htm#pos=1&type=8&lhid=2" >Book Now</a></p><br><br>
+            <% end %>
+
+        </div>
+       
+    </td>
+  </tr>
+
+<% end %>
+</table>
+    <p><%= link_to 'New Hotel', new_hotel_path %></p>

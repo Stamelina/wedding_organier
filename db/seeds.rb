@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Hotel.create(:name => 'Wedding Venues',
+:description =>
+%{<p> The finest wedding venues in Ireland</p>},
+    :image_url => 'images/h1.jpg')
