@@ -2,3 +2,4 @@ stamelina:
   name: Stamelina Aitova
   email: stamelina@gmail.com
   password_digest: <%= User.digest('password') %>
+  admin: true
