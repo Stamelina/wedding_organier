@@ -2,4 +2,40 @@ stamelina:
   name: Stamelina Aitova
   email: stamelina@gmail.com
   password_digest: <%= User.digest('password') %>
-  admin: true
+  
+leena: 
+  name: Leena Georgieva
+  email: leena@gmail.com
+  password_digest: <%= User.digest('password') %>
+  
+leena: 
+  name: Angel Bangeev
+  email: angel@gmail.com
+  password_digest: <%= User.digest('password') %>
+  
+leena: 
+  name: Marian Marcri
+  email: marian@gmail.com
+  password_digest: <%= User.digest('password') %>
+  
+leena: 
+  name: Billy Maher
+  email: billy@gmail.com
+  password_digest: <%= User.digest('password') %>
+  
+leena: 
+  name: Maria Murphy
+  email: maria@gmail.com
+  password_digest: <%= User.digest('password') %>
+  
+leena: 
+  name: John Smith
+  email: john@gmail.com
+  password_digest: <%= User.digest('password') %>
+  
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>

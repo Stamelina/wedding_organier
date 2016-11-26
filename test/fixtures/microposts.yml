@@ -1,9 +1,17 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  content: MyText
-  user_id: 1
 
-two:
-  content: MyText
-  user_id: 1
+orange:
+  content: "Ready for my honeymoon!"
+  created_at: <%= 10.minutes.ago %>
+
+tau_manifesto:
+  content: "Check out the best wedding bands on bands.ie"
+  created_at: <%= 3.years.ago %>
+
+cat_video:
+  content: "I can't believe we got our wedding all planned already! Thanks to weddingorg.ie"
+  created_at: <%= 2.hours.ago %>
+
+most_recent:
+  content: "Guests confirmed.. on my way to book a flower theme"
+  created_at: <%= Time.zone.now %>

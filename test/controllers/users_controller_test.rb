@@ -1,11 +1,18 @@
 require 'test_helper'
 
-class UsersControllerTest < ActionDispatch::IntegrationTest
+class UsersControllerTest < ActionController::TestCase
+  
+  def setup
+    @user       = users(:stamelina)
+
+  end
+  
+
 
   test "should get new" do
-     get signup_path
-    get users_new_url
+    get :new
     assert_response :success
   end
-end
   
+  
+end

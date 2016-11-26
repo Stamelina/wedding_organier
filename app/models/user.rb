@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  
+ has_many :microposts, dependent: :destroy
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
   validates :name,  presence: true, length: { maximum: 50 }
@@ -16,7 +16,11 @@ class User < ApplicationRecord
                                                   BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
-
+ # Defines a proto-feed.
+  # See "Following users" for the full implementation.
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
   # Returns a random token.
   def User.new_token
     SecureRandom.urlsafe_base64
